@@ -1,193 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MaestroDelFuego - GitHub</title>
-    <meta property="og:title" content="MaestroDelFuego - GitHub" />
-    <meta property="og:description" content="Hi, I'm MaestroDelFuego! I'm a self-taught IT enthusiast passionate about cybersecurity, web development, and building innovative solutions. I'm also the founder of exciting projects like ZipAura!" />
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/160979076?v=4&size=64" />
-    <meta property="og:url" content="https://github.com/MaestroDelFuego" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="MaestroDelFuego - GitHub" />
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MaestroDelFuego - GitHub">
-    <meta name="twitter:description" content="Hi, I'm MaestroDelFuego! I'm a self-taught IT enthusiast passionate about cybersecurity, web development, and building innovative solutions. I'm also the founder of exciting projects like ZipAura!">
-    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/160979076?v=4&size=64">
-    <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            background: #f0f4f8;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #1a202c;
-            color: white;
-            transition: background-color 0.3s ease;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MaestroDelFuego - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/160979076?v=4" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            width: 100%;
-            padding: 20px;
-            background: #2d3748;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        h1, h2 {
-            margin-bottom: 20px;
-            font-size: 2.5rem;
-            color: #68d391;
-            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #1a202c;
+      color: #edf2f7;
+      line-height: 1.6;
+    }
 
-        h3 {
-            margin-top: 15px;
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #e2e8f0;
-        }
+    header {
+      background-color: #2d3748;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
 
-        p {
-            font-size: 1.1rem;
-            color: #cbd5e0;
-            margin-bottom: 20px;
-        }
+    header nav a {
+      color: #68d391;
+      margin: 0 15px;
+      font-weight: 600;
+      text-decoration: none;
+    }
 
-        a {
-            text-decoration: none;
-            color: #38b2ac;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
+    header nav a:hover {
+      color: #38b2ac;
+    }
 
-        a:hover {
-            color: #e2e8f0;
-        }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
 
-        /* Projects Section */
-        .projects {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 40px;
-        }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid #38b2ac;
+    }
 
-        .project-card {
-            background: #2d3748;
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
+    .hero h1 {
+      font-size: 2.8rem;
+      color: #68d391;
+      margin-bottom: 10px;
+    }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-            background-color: #4a5568;
-        }
+    .tagline {
+      font-size: 1.2rem;
+      color: #cbd5e0;
+      margin-bottom: 20px;
+    }
 
-        .project-card h4 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #68d391;
-        }
+    .cta-button {
+      display: inline-block;
+      background-color: #38b2ac;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
 
-        .project-card p {
-            color: #cbd5e0;
-            margin-bottom: 15px;
-        }
+    .cta-button:hover {
+      background-color: #48bb78;
+    }
 
-        .project-card .link {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #38b2ac;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
-        .project-card .link:hover {
-            background-color: #48bb78;
-        }
+    .section-title {
+      font-size: 2rem;
+      color: #68d391;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-        /* Animation for Fade-In Effect */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1s forwards;
-        }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
 
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
+    .project-card {
+      background-color: #2d3748;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
 
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .projects {
-                grid-template-columns: 1fr;
-            }
-        }
+    .project-card:hover {
+      transform: translateY(-5px);
+      background-color: #4a5568;
+    }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem;
-            }
-            .container {
-                padding: 10px;
-            }
-        }
-    </style>
+    .project-card h3 {
+      color: #68d391;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: #cbd5e0;
+      margin-bottom: 15px;
+    }
+
+    .project-card .link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background-color: #38b2ac;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .project-card .link:hover {
+      background-color: #48bb78;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .contact p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .contact a {
+      color: #38b2ac;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2d3748;
+      color: #a0aec0;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container fade-in">
-        <h1>Welcome to MaestroDelFuego's Page</h1>
-        <p>Hi, I'm MaestroDelFuego! I'm a self-taught IT enthusiast with a BTEC in Digital Information Technology from high school and further college education in IT. I’m passionate about cybersecurity, web development, and building innovative solutions. I'm also the founder of two exciting projects:</p>
 
-        <div class="projects">
-            <!-- Phishing Authority Project -->
-            <div class="project-card">
-                <h4>Phishing Authority API</h4>
-                <p>Phishing Authority API is a powerful tool designed to analyze URLs and assess their risk of being associated with phishing attacks. It includes checks for domain age, DNS resolution, suspicious keywords, and more to help identify potentially harmful links.</p>
-                <a href="https://github.com/MaestroDelFuego/PhishingAuthority-API/tree/main" class="link" target="_blank">Check it out on GitHub</a>
-            </div>
+  <header>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-            <!-- PicStream Project -->
-            <div class="project-card">
-                <h4>PicStream.gg</h4>
-                <p>PicStream is a web application that lets users upload images and videos, generate unique URLs, and easily share them. It also supports metadata for each file, including customizable title, description, and embed color (hex code).</p>
-                <a href="https://github.com/MaestroDelFuego/PicStream.gg" class="link" target="_blank">Check it out on GitHub</a>
-            </div>
-             <!-- ZipAura Project -->
-            <div class="project-card">
-                <h4>ZipAura</h4>
-                <p>ZipAura is a user-friendly zip file management tool with a sleek, modern interface. It lets you create, extract, and manage zip archives with ease. The application supports multiple formats and aims to provide a simple yet powerful experience for handling compressed files.</p>
-                <a href="https://github.com/MaestroDelFuego/ZipAura" class="link" target="_blank">Check it out on GitHub</a>
-            </div>
-        </div>
+  <section class="hero">
+    <img src="https://avatars.githubusercontent.com/u/160979076?v=4" alt="Avatar" class="avatar" />
+    <h1>Hi, I'm MaestroDelFuego</h1>
+    <p class="tagline">Cybersecurity Enthusiast • Web Developer • Project Builder</p>
+    <a href="#projects" class="cta-button">Explore My Work</a>
+  </section>
 
-        <h3>Current Status</h3>
-        <p>I am currently unemployed but actively seeking new opportunities. I am eager to apply my skills in IT, cybersecurity, and web development in a professional setting. If you’re interested in collaborating or have any opportunities available, feel free to reach out!</p>
+  <div class="container" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Phishing Authority API</h3>
+        <p>A powerful API that analyzes URLs for phishing risks using DNS, age, keywords, and more.</p>
+        <a href="https://github.com/MaestroDelFuego/PhishingAuthority-API/tree/main" target="_blank" class="link" rel="noopener noreferrer">View on GitHub</a>
+      </div>
 
-        <h3>Get in Touch</h3>
-        <p>Feel free to reach out for collaborations or if you have any questions.</p>
+      <div class="project-card">
+        <h3>PicStream.gg</h3>
+        <p>Upload and share images/videos with metadata. Clean UI and customizable embed colors.</p>
+        <a href="https://github.com/MaestroDelFuego/PicStream.gg" target="_blank" class="link" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>ZipAura</h3>
+        <p>A sleek zip file manager that supports multiple formats with intuitive controls and UI.</p>
+        <a href="https://github.com/MaestroDelFuego/ZipAura" target="_blank" class="link" rel="noopener noreferrer">View on GitHub</a>
+      </div>
     </div>
+  </div>
+
+<div class="container contact" id="contact">
+  <h2 class="section-title">Get in Touch</h2>
+  <p>I’m currently open to new opportunities or collaborations in IT, web dev, or cybersecurity.</p>
+  <p>I'm also the <strong>Community Manager</strong> at <em>Wings of the People's Liberation</em>, a War Thunder squadron and active Discord community.</p>
+  <p>Join us on Discord: <a href="https://discord.gg/wFnQyPPFWy" target="_blank" rel="noopener noreferrer">discord.gg/wFnQyPPFWy</a></p>
+</div>
+
+  <footer>
+    &copy; 2025 MaestroDelFuego. Built with ❤️ and HTML/CSS.
+  </footer>
+
 </body>
 </html>
