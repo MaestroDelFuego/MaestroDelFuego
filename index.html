@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta property="og:title" content="MaestroDelFuego - Portfolio" />
-<meta property="og:description" content="Cybersecurity Enthusiast • Web Developer • Project Builder. Explore my projects here and get to know a little more about me." />
-<meta property="og:image" content="https://avatars.githubusercontent.com/u/160979076?v=4" />
-<meta property="og:url" content="https://maestrodelfuego.github.io/MaestroDelFuego/" />
-<meta property="og:type" content="website" />
+  <meta property="og:description" content="Cybersecurity Enthusiast • Web Developer • Project Builder. Explore my projects here and get to know a little more about me." />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/160979076?v=4" />
+  <meta property="og:url" content="https://maestrodelfuego.github.io/MaestroDelFuego/" />
+  <meta property="og:type" content="website" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MaestroDelFuego - Portfolio</title>
@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="icon" href="https://avatars.githubusercontent.com/u/160979076?v=4" />
   
+
   <style>
     * {
       margin: 0;
@@ -25,70 +26,87 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #1a202c;
-      color: #edf2f7;
-      line-height: 1.6;
+      font-family: 'Share Tech Mono', monospace;
+      background-color: #0d0d0d;
+      color: #f8f8f2;
     }
 
     header {
-      background-color: #2d3748;
+      background-color: #121212;
       padding: 20px;
       text-align: center;
       position: sticky;
       top: 0;
-      z-index: 999;
+      z-index: 1000;
+      border-bottom: 1px solid #00ff99;
     }
 
     header nav a {
-      color: #68d391;
-      margin: 0 15px;
-      font-weight: 600;
+      color: #00ff99;
+      margin: 0 20px;
       text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
     }
 
     header nav a:hover {
-      color: #38b2ac;
+      color: #00e0ff;
     }
 
     .hero {
       text-align: center;
       padding: 60px 20px;
+      animation: fadeInUp 1s ease forwards;
     }
 
     .avatar {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
+      border: 3px solid #00ff99;
       margin-bottom: 20px;
-      border: 4px solid #38b2ac;
+      box-shadow: 0 0 20px #00ff99;
+      animation: pulseGlow 2.5s infinite ease-in-out;
     }
 
     .hero h1 {
-      font-size: 2.8rem;
-      color: #68d391;
+      font-size: 2.5rem;
+      color: #00ff99;
       margin-bottom: 10px;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.2s;
+      opacity: 0;
     }
 
     .tagline {
-      font-size: 1.2rem;
-      color: #cbd5e0;
-      margin-bottom: 20px;
+      font-size: 1.1rem;
+      color: #00e0ff;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.4s;
+      opacity: 0;
     }
 
     .cta-button {
       display: inline-block;
-      background-color: #38b2ac;
-      color: white;
-      padding: 12px 25px;
+      margin-top: 25px;
+      background-color: #00ff99;
+      color: #0d0d0d;
+      padding: 12px 24px;
       border-radius: 5px;
       text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 0 15px #00ff99;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.6s;
+      opacity: 0;
+      transition: all 0.3s ease;
     }
 
     .cta-button:hover {
-      background-color: #48bb78;
+      background-color: #00e0ff;
+      color: #0d0d0d;
+      box-shadow: 0 0 25px #00e0ff;
     }
 
     .container {
@@ -98,81 +116,108 @@
     }
 
     .section-title {
-      font-size: 2rem;
-      color: #68d391;
-      margin-bottom: 20px;
       text-align: center;
+      font-size: 2rem;
+      color: #00ff99;
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.2s;
+      opacity: 0;
     }
 
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
-      margin-top: 30px;
     }
 
     .project-card {
-      background-color: #2d3748;
+      background-color: #1a1a1a;
       padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, background-color 0.3s ease;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00ff9977;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
     }
 
     .project-card:hover {
       transform: translateY(-5px);
-      background-color: #4a5568;
+      box-shadow: 0 0 20px #00ff99;
     }
 
     .project-card h3 {
-      color: #68d391;
-      font-size: 1.4rem;
+      color: #00e0ff;
+      font-size: 1.3rem;
       margin-bottom: 10px;
     }
 
     .project-card p {
-      color: #cbd5e0;
-      margin-bottom: 15px;
+      color: #ccc;
+      font-size: 0.95rem;
     }
 
-    .project-card .link {
+    .link {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 18px;
-      background-color: #38b2ac;
-      color: white;
-      border-radius: 5px;
+      margin-top: 12px;
+      padding: 8px 16px;
+      background-color: #00ff99;
+      color: #0d0d0d;
+      border-radius: 4px;
       text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00ff99;
+      transition: all 0.3s ease;
     }
 
-    .project-card .link:hover {
-      background-color: #48bb78;
+    .link:hover {
+      background-color: #00e0ff;
+      box-shadow: 0 0 20px #00e0ff;
     }
 
-    .contact {
+    .contact, .about-me {
       text-align: center;
       margin-top: 60px;
-    }
-
-    .contact p {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.3s;
+      opacity: 0;
     }
 
     .contact a {
-      color: #38b2ac;
+      color: #00e0ff;
       text-decoration: none;
-      font-weight: 600;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #2d3748;
-      color: #a0aec0;
-      margin-top: 40px;
+      background-color: #121212;
+      color: #666;
+      font-size: 0.9rem;
+      margin-top: 60px;
+      border-top: 1px solid #00ff99;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 15px #00ff99;
+      }
+      50% {
+        box-shadow: 0 0 25px #00e0ff;
+      }
     }
   </style>
 </head>
@@ -196,33 +241,87 @@
     <h2 class="section-title">Projects</h2>
     <div class="projects">
       <!-- NORTHBRIDGE ROLEPLAY -->
-<div class="project-card" style="border: 2px solid #f6ad55; background-color: #1a202c; display: flex; flex-direction: column; align-items: center; text-align: center;">
-  <h3 class="section-title" style="color: #f6ad55;">🚨 Featured: Northbridge Roleplay</h2>
-  <img src="https://cdn.discordapp.com/icons/1343354364299051138/d536a02cce157e121aaccbcaaff36dd2.webp" alt="Northbridge Roleplay Icon" style="width: 100px; height: 100px; border-radius: 20%; margin-bottom: 15px; border: 3px solid #f6ad55;" />
+<div class="project-card" style="border: 2px solid #f6ad55; background-color: #1a202c; padding: 2rem; border-radius: 12px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+  
+  <h3 class="section-title" style="color: #f6ad55; font-size: 1.75rem; margin-bottom: 1rem;">🚨 Featured: Northbridge Roleplay</h3>
+  
+  <img src="https://cdn.discordapp.com/icons/1343354364299051138/d536a02cce157e121aaccbcaaff36dd2.webp" 
+       alt="Northbridge Roleplay Icon" 
+       style="width: 100px; height: 100px; border-radius: 20%; margin-bottom: 15px; border: 3px solid #f6ad55;" />
+
   <h3 style="color: #f6ad55; font-size: 1.6rem; margin-bottom: 10px;">🚨 Northbridge Roleplay (2025–Present)</h3>
+
   <p style="color: #fbd38d;">Explore a detailed world with over <strong>40+ custom interiors</strong>: PDs, clubs, mechanic shops, luxury homes & more.</p>
+  
   <p style="color: #fbd38d;">Enjoy <strong>unique jobs</strong>, immersive RP, and <strong>optimized performance</strong> in a feature-rich FiveM experience.</p>
+  
   <p style="color: #fbd38d;">
-  Cfx.re Server List:
-  <code>
-  <a href="https://servers.fivem.net/servers/detail/dqrdbd" target="_blank" rel="noopener noreferrer" style="color: #f6ad55; word-break: break-all; text-decoration: underline;">
-    https://servers.fivem.net/servers/detail/dqrdbd
+    Cfx.re Server List:  
+    <a href="https://servers.fivem.net/servers/detail/dqrdbd" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       style="color: #f6ad55; word-break: break-word; text-decoration: underline;">
+      https://servers.fivem.net/servers/detail/dqrdbd
+    </a>
+  </p>
+
+  <!-- Styled Discord Button -->
+  <a href="https://discord.gg/wf4s7kwZuN" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     style="
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #f6ad55;
+        color: #1a202c;
+        font-weight: bold;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+     "
+     onmouseover="this.style.backgroundColor='#dd6b20'"
+     onmouseout="this.style.backgroundColor='#f6ad55'">
+     🔗 Join the Discord
   </a>
-  </code> 
-</p>
-  <a href="https://discord.gg/wf4s7kwZuN" target="_blank" class="link" rel="noopener noreferrer" style="background-color: #1a202c; color: #1a202c; margin-top: 15px;">Join the Discord</a>
 </div>
 
 <!-- ENDER EMPIRE -->
-<div class="project-card" style="border: 2px solid #4299e1; background-color: #1a202c; display: flex; flex-direction: column; align-items: center; text-align: center;">
-  <h3 class="section-title" style="color: #63b3ed;">🚨 Featured: Ender Empire</h2>
-  <img src="https://cdn.discordapp.com/icons/1358518504453705969/6f80b650a338435a974d21b2df4b0064.webp" alt="Ender Empire Icon" style="width: 90px; height: 90px; border-radius: 20%; margin-bottom: 15px; border: 3px solid #4299e1;" />
+<div class="project-card" style="border: 2px solid #4299e1; background-color: #1a202c; padding: 2rem; border-radius: 12px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+
+  <h3 class="section-title" style="color: #63b3ed; font-size: 1.75rem; margin-bottom: 1rem;">🌀 Featured: Ender Empire</h3>
+
+  <img src="https://cdn.discordapp.com/icons/1358518504453705969/6f80b650a338435a974d21b2df4b0064.webp" 
+       alt="Ender Empire Icon" 
+       style="width: 90px; height: 90px; border-radius: 20%; margin-bottom: 15px; border: 3px solid #4299e1;" />
+
   <h3 style="color: #63b3ed; font-size: 1.6rem; margin-bottom: 10px;">🌀 Ender Empire (2025–Present)</h3>
+
   <p style="color: #bee3f8;">A heavily-modded Minecraft Java 1.20.1 CurseForge server with <strong>Create</strong>, <strong>Planes</strong>, and more — shaping an evolving player economy.</p>
+
   <p style="color: #bee3f8;">Enjoy custom plugins, voice chat, and seamless mod integration.</p>
-  <p style="color: #bee3f8;">Server IP: <code>enterprise-laundry.joinmc.link</code></p>
-  <a href="https://discord.gg/F5tZQXsxne" target="_blank" class="link" rel="noopener noreferrer" style="background-color: #4299e1; color: #1a202c; margin-top: 15px;">Join the Discord</a>
+
+  <p style="color: #bee3f8;">Server IP: <code style="color: #90cdf4;">enterprise-laundry.joinmc.link</code></p>
+
+  <!-- Styled Discord Button at Bottom -->
+  <a href="https://discord.gg/F5tZQXsxne" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     style="
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #4299e1;
+        color: #1a202c;
+        font-weight: bold;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+     "
+     onmouseover="this.style.backgroundColor='#3182ce'"
+     onmouseout="this.style.backgroundColor='#4299e1'">
+     🔗 Join the Discord
+  </a>
 </div>
+
       <div class="project-card">
         <h3>Phishing Authority API</h3>
         <p>Powerful API version of the website analyzes URLs for potential security risks. It checks domain extensions (e.g., .xin, .ru), verifies HTTPS usage, cross-references against whitelisted domains, and scans for suspicious keywords, providing risk scores and detailed assessments.</p>
@@ -241,12 +340,6 @@
         <a href="https://github.com/MaestroDelFuego/ZipAura" target="_blank" class="link" rel="noopener noreferrer">View on GitHub</a>
       </div>
       <div class="project-card">
-        <h3>ZeroclickLAN</h3>
-        <p>A zero-configuration toolkit for local networking. Seamlessly connect and discover devices on LAN with no server sided setup required.</p>
-        <a href="https://github.com/MaestroDelFuego/ZeroclickLAN" target="_blank" class="link" rel="noopener noreferrer">View on GitHub</a>
-      </div>
-
-      <div class="project-card">
         <h3>OpenDNS (Custom)</h3>
         <p>A lightweight, C#-based DNS server with support for conditional domain blocking, wildcard matching, and intelligent forwarding to upstream resolvers like Google DNS. Includes customizable subcategory filters and IP-based access control.</p>
       <a href="https://github.com/MaestroDelFuego/OpenDNS" target="_blank" class="link" rel="noopener noreferrer">View on GitHub</a>
@@ -259,29 +352,46 @@
     </div>
   </div>
 
-<div class="container contact" id="contact">
-  <h2 class="section-title">More info</h2>
-<div class="container about-me" id="about-me">
-  <h2 class="section-title">About Me</h2>
-  <p>I started creating single-player mods for video games at age 13, which sparked my passion for game development and programming. Since then, I’ve worked on several projects, including the Eroded Minecraft server, where I designed websites, built in-game item stores, and developed and managed Discord bots.</p>
-  <p>At 16, I began studying networking, cybersecurity, and emerging technologies at college. Now 17, I’ve completed the first step of my Higher Level 3 course in Information Technology. Alongside my studies, I’ve developed multiple projects such as:</p>
-  <br>
-  <ul>
-    <li><strong>Phishing Authority API</strong></li>
-    <li><strong>Ender Empire</strong></li>
-    <li><strong>Northbridge Roleplay</strong></li>
-    <li><strong>PicStream.gg</strong></li>
-    <li><strong>Custom OpenDNS</strong></li>
-    <li></strong>Numerous scripts for FiveM and QB Core</strong></li>
-  </ul>
-  <p>I’m passionate about creating innovative solutions and continuously expanding my skill set in IT and cybersecurity.</p>
+<div class="container contact" id="contact" style="background-color: rgb(25, 25, 25); padding: 2rem; border-radius: 12px; color: #e2e8f0; font-family: 'JetBrains Mono', monospace;">
+  
+  <!-- More Info Section -->
+  <h2 class="section-title" style="font-size: 2rem; color: #38bdf8;">📌 More Info</h2>
+  
+  <!-- About Me Section -->
+  <div class="about-me" id="about-me" style="margin-top: 2rem;">
+    <h2 class="section-title" style="font-size: 1.75rem; color: #f472b6;">👨‍💻 About Me</h2>
+    <p>I started modding single-player games at <strong>13</strong>, sparking a deep passion for game development and programming. I’ve since contributed to a variety of projects, like the <strong>Eroded Minecraft</strong> server — where I handled web design, in-game store development, and Discord bot management.</p>
+
+    <p>At <strong>16</strong>, I began formal studies in <em>networking, cybersecurity, and emerging technologies</em>. Now <strong>17</strong>, I’ve completed the first stage of my Level 3 Higher National Certificate in Information Technology.</p>
+
+    <p>Some of my key projects include:</p>
+
+    <ul style="list-style-type: '🧠 '; padding-left: 1.5rem;">
+      <li><strong>Phishing Authority API</strong> — anti-scam infrastructure</li>
+      <li><strong>Ender Empire</strong> — Minecraft network</li>
+      <li><strong>Northbridge Roleplay</strong> — 🇬🇧 UK-based FiveM server</li>
+      <li><strong>PicStream.gg</strong> — image-sharing platform</li>
+      <li><strong>Custom OpenDNS</strong> — DNS routing & threat detection</li>
+      <li><strong>FiveM / QB-Core Scripts</strong> — custom in-game systems</li>
+    </ul>
+
+    <p>I’m passionate about building practical, secure, and scalable systems — and always pushing my limits in <strong>IT, web development, and cybersecurity</strong>.</p>
   </div>
-  <br>
-  <p>I’m currently open to new opportunities or collaborations in IT, web dev, or cybersecurity.</p>
-  <p>I'm also the <strong>Community Manager</strong> at <em>Wings of the People's Liberation</em>, a War Thunder squadron and active Discord community.</p>
-  <h2 class="section-title">Get in Touch</h2>
-  <p>My personal discord server: <a href="https://discord.gg/urd5mxBXcW" target="_blank" rel="noopener noreferrer">discord.gg/urd5mxBXcW</a></p>
+
+  <!-- Current Status -->
+<div style="margin-top: 2rem; color: #e2e8f0;">
+  <p>🚀 <strong>Currently Open</strong> to freelance, collaboration, or part-time roles in IT, web development, cybersecurity, or scripting projects.</p>
+  <p>🤖 Actively developing <strong>Discord bots</strong> and creating custom <strong>FiveM scripts</strong> for immersive RP servers and utility tools.</p>
+  <p>🎮 I also serve as the <strong>Community Manager</strong> at <em>Wings of the People’s Liberation</em>, a <strong>War Thunder</strong> squadron and thriving Discord community.</p>
 </div>
+
+  <!-- Contact -->
+  <div style="margin-top: 2.5rem;">
+    <h2 class="section-title" style="font-size: 1.75rem; color: #38bdf8;">📬 Get in Touch</h2>
+    <p>Join my Discord server: <a href="https://discord.gg/urd5mxBXcW" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; text-decoration: underline;">discord.gg/urd5mxBXcW</a></p>
+  </div>
+</div>
+
 
 
   <footer>
